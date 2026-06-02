@@ -27,7 +27,9 @@ padding:0;
 box-sizing:border-box;
 }
 
-html{scroll-behavior:smooth;}
+html{
+scroll-behavior:smooth;
+}
 
 body{
 background:var(--black);
@@ -43,7 +45,7 @@ margin:auto;
 padding:0 30px;
 }
 
-/* ================= NAV FIX ONLY ================= */
+/* NAV */
 
 nav{
 padding:28px 0;
@@ -56,38 +58,23 @@ border-bottom:1px solid rgba(255,255,255,.04);
 }
 
 .nav-inner{
-display:grid;
-grid-template-columns:1fr auto 1fr;
+display:flex;
+justify-content:space-between;
 align-items:center;
 }
 
-/* left text logo */
 .logo{
 font-family:'Cormorant Garamond',serif;
 font-size:2rem;
 font-weight:700;
 letter-spacing:1px;
-justify-self:start;
 }
 
 .logo span{
 color:var(--gold);
 }
 
-/* center image */
-.center-logo{
-justify-self:center;
-}
-
-.center-logo img{
-max-width:170px;
-width:100%;
-height:auto;
-}
-
-/* right button */
 .nav-btn{
-justify-self:end;
 padding:12px 24px;
 background:var(--gold);
 color:#000;
@@ -96,26 +83,7 @@ text-decoration:none;
 font-weight:600;
 }
 
-/* mobile fix */
-@media(max-width:950px){
-
-.nav-inner{
-grid-template-columns:1fr;
-text-align:center;
-gap:12px;
-}
-
-.logo,.center-logo,.nav-btn{
-justify-self:center;
-}
-
-.center-logo img{
-max-width:120px;
-}
-
-}
-
-/* ================= HERO ================= */
+/* HERO */
 
 .hero{
 padding:120px 0 140px;
@@ -180,12 +148,30 @@ padding:16px 34px;
 border-radius:999px;
 font-weight:600;
 text-decoration:none;
+transition:.3s;
+display:inline-block;
 }
 
-.btn-primary{background:var(--gold);color:#000;}
-.btn-outline{border:1px solid var(--gold);color:var(--gold);}
+.btn-primary{
+background:var(--gold);
+color:#000;
+}
 
-/* ================= SECTIONS ================= */
+.btn-primary:hover{
+transform:translateY(-3px);
+}
+
+.btn-outline{
+border:1px solid var(--gold);
+color:var(--gold);
+}
+
+.btn-outline:hover{
+background:var(--gold);
+color:#000;
+}
+
+/* SECTION */
 
 section{
 padding:110px 0;
@@ -194,6 +180,7 @@ padding:110px 0;
 .section-title{
 font-family:'Cormorant Garamond',serif;
 font-size:4rem;
+line-height:1;
 text-align:center;
 margin-bottom:15px;
 }
@@ -205,35 +192,165 @@ text-align:center;
 color:var(--muted);
 }
 
-/* ================= GRID SYSTEMS ================= */
+/* STATS */
 
-.stats,
-.services,
-.outcomes,
-.audience-grid,
-.why-grid{
+.stats{
 display:grid;
+grid-template-columns:repeat(4,1fr);
 gap:20px;
 }
 
-.stats{grid-template-columns:repeat(4,1fr);}
-.services{grid-template-columns:repeat(2,1fr);}
-.outcomes{grid-template-columns:repeat(4,1fr);}
-.audience-grid{grid-template-columns:repeat(2,1fr);}
-.why-grid{grid-template-columns:repeat(4,1fr);}
-
-.stat,
-.service,
-.outcome,
-.audience-card,
-.why-card{
+.stat{
 background:var(--card);
 border:1px solid var(--border);
-padding:30px;
-border-radius:20px;
+padding:40px;
+border-radius:24px;
+text-align:center;
 }
 
-/* ================= FOUNDER ================= */
+.stat h3{
+font-size:3rem;
+color:var(--gold);
+margin-bottom:10px;
+}
+
+.stat p{
+color:var(--muted);
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+}
+
+.service{
+background:linear-gradient(180deg,#101010,#0b0b0b);
+border:1px solid var(--border);
+padding:50px;
+border-radius:30px;
+transition:.3s;
+}
+
+.service:hover{
+transform:translateY(-6px);
+border-color:rgba(212,175,55,.4);
+}
+
+.service-number{
+font-size:12px;
+letter-spacing:3px;
+color:var(--gold);
+margin-bottom:20px;
+}
+
+.service h3{
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+margin-bottom:15px;
+}
+
+.service h4{
+color:var(--gold);
+margin-bottom:25px;
+font-weight:500;
+}
+
+.service p{
+color:var(--muted);
+margin-bottom:25px;
+}
+
+.service ul{
+list-style:none;
+}
+
+.service li{
+padding:12px 0;
+border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+/* OUTCOMES */
+
+.outcomes{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.outcome{
+background:var(--card);
+padding:35px;
+border-radius:24px;
+text-align:center;
+border:1px solid rgba(255,255,255,.05);
+}
+
+.outcome h4{
+margin-bottom:15px;
+font-size:1.2rem;
+}
+
+.outcome p{
+color:var(--muted);
+}
+
+/* AUDIENCE */
+
+.audience{
+background:#080808;
+}
+
+.audience-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+}
+
+.audience-card{
+background:var(--card);
+border:1px solid var(--border);
+padding:45px;
+border-radius:28px;
+}
+
+.audience-card h3{
+font-family:'Cormorant Garamond',serif;
+font-size:2.5rem;
+margin-bottom:20px;
+}
+
+.audience-card p{
+color:var(--muted);
+}
+
+/* WHY */
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+.why-card{
+background:var(--card);
+padding:35px;
+border-radius:24px;
+text-align:center;
+}
+
+.why-card h4{
+margin-bottom:15px;
+font-size:1.2rem;
+}
+
+.why-card p{
+color:var(--muted);
+}
+
+/* FOUNDER */
 
 .founder{
 max-width:900px;
@@ -253,7 +370,7 @@ margin-bottom:20px;
 font-size:1.08rem;
 }
 
-/* ================= CTA ================= */
+/* CTA */
 
 .cta{
 background:#080808;
@@ -274,7 +391,7 @@ margin-bottom:45px;
 color:var(--muted);
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer{
 padding:60px 20px;
@@ -293,15 +410,23 @@ color:var(--gold);
 letter-spacing:2px;
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 
 @media(max-width:950px){
 
-.hero h1{font-size:3.5rem;}
+.hero{
+padding:90px 0;
+}
+
+.hero h1{
+font-size:3.5rem;
+}
 
 .section-title,
 .founder h2,
-.cta h2{font-size:2.8rem;}
+.cta h2{
+font-size:2.8rem;
+}
 
 .stats,
 .services,
@@ -322,62 +447,144 @@ max-width:320px;
 }
 
 }
+/* NAV FIXED (CLEAN + COMPACT) */
 
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+/* LEFT LOGO */
+.logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.6rem;
+  font-weight:700;
+  letter-spacing:1px;
+  white-space:nowrap;
+}
+
+/* CENTER LOGO (PROPER CONTROLLED SIZE) */
+.center-logo{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex:1;
+}
+
+.center-logo img{
+  height:52px;        /* 👈 controls size (increase = bigger logo) */
+  width:auto;
+  max-width:160px;
+  object-fit:contain;
+}
+
+/* RIGHT BUTTON */
+.nav-btn{
+  padding:10px 18px;
+  font-size:14px;
+  white-space:nowrap;
+}
+
+/* MOBILE FIX */
+@media(max-width:950px){
+
+  nav{
+    padding:18px 0;
+  }
+
+  .nav-inner{
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+  }
+
+  .logo{
+    font-size:1.2rem;
+    text-align:center;
+    width:100%;
+  }
+
+  .center-logo{
+    order:2;
+    width:100%;
+  }
+
+  .center-logo img{
+    height:60px;   /* smaller but still visible */
+  }
+
+  .nav-btn{
+    order:3;
+    width:100%;
+    text-align:center;
+  }
+}
 </style>
 </head>
-
 <body>
 
-<!-- NAV -->
 <nav>
 <div class="container">
 <div class="nav-inner">
 
-<div class="logo">
-Ascend <span>Media Group</span>
-</div>
+  <!-- LEFT TEXT LOGO -->
+  <div class="logo">
+    Ascend <span>Media Group</span>
+  </div>
 
-<div class="center-logo">
-<img src="ascend_group.png" alt="Ascend Media Group">
-</div>
+  <!-- CENTER IMAGE LOGO -->
+  <div class="center-logo">
+    <img src="ascend_group.png" alt="Ascend Media Group">
+  </div>
 
-<a href="https://ascendmediagroup.github.io/schedule.html" class="nav-btn">
-Schedule Consultation
-</a>
+  <!-- RIGHT BUTTON -->
+  <a href="https://ascendmediagroup.github.io/schedule.html" class="nav-btn">
+    Schedule Consultation
+  </a>
 
 </div>
 </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
+
 <div class="container">
 
 <div class="tagline">
 STRATEGIC GROWTH • VISIBILITY • PARTNERSHIPS
 </div>
 
-<h1>
+<h2>
 Building Influence.<br>
 Creating Opportunity.<br>
 Accelerating Growth.
-</h1>
+</h2>
 
 <p>
 Ascend Media Group helps businesses, entrepreneurs, creators, and professionals increase visibility, strengthen authority, and build valuable partnerships through strategic promotion and influential networks.
 </p>
 
 <div class="hero-buttons">
-<a href="#services" class="btn btn-primary">Explore Services</a>
-<a href="https://ascendmediagroup.github.io/schedule.html" class="btn btn-outline">Schedule Consultation</a>
+<a href="#services" class="btn btn-primary">
+Explore Services
+</a>
+
+<a href="https://ascendmediagroup.github.io/schedule.html" class="btn btn-outline">
+Schedule Consultation
+</a>
 </div>
 
 </div>
+
 </section>
 
-<!-- STATS -->
 <section>
+
 <div class="container">
+
 <div class="stats">
 
 <div class="stat">
@@ -401,14 +608,19 @@ Ascend Media Group helps businesses, entrepreneurs, creators, and professionals 
 </div>
 
 </div>
+
 </div>
+
 </section>
 
-<!-- SERVICES -->
 <section id="services">
+
 <div class="container">
 
-<h2 class="section-title">Our Core Divisions</h2>
+<h2 class="section-title">
+Our Core Divisions
+</h2>
+
 <p class="section-subtitle">
 Two integrated solutions designed to increase visibility and create meaningful opportunities.
 </p>
@@ -416,121 +628,257 @@ Two integrated solutions designed to increase visibility and create meaningful o
 <div class="services">
 
 <div class="service">
-<h3>Visibility & Growth</h3>
-<h4>Strategic Marketing & Brand Development</h4>
-<p>Premium content creation, targeted promotion, and growth-focused marketing strategies.</p>
+
+<div class="service-number">
+01 • VISIBILITY & GROWTH
+</div>
+
+<h3>
+Visibility & Growth
+</h3>
+
+<h4>
+Strategic Marketing & Brand Development
+</h4>
+
+<p>
+Premium content creation, targeted promotion, and growth-focused marketing strategies designed to help brands stand out in competitive markets.
+</p>
+
 <ul>
-<li>Reel Creation</li>
+<li>Professional Reel Creation</li>
 <li>TikTok Marketing</li>
 <li>Instagram Growth</li>
 <li>Facebook Promotion</li>
 <li>Content Strategy</li>
+<li>Brand Awareness Campaigns</li>
+<li>Personal Branding</li>
+<li>Portfolio Promotion</li>
+<li>Audience Growth</li>
 </ul>
+
 </div>
 
 <div class="service">
-<h3>Partnerships & Connections</h3>
-<h4>Strategic Networking & Introductions</h4>
-<p>Meaningful collaborations and professional relationships.</p>
+
+<div class="service-number">
+02 • PARTNERSHIPS & CONNECTIONS
+</div>
+
+<h3>
+Partnerships & Connections
+</h3>
+
+<h4>
+Strategic Networking & Introductions
+</h4>
+
+<p>
+Meaningful introductions, strategic collaborations, and professional relationships designed to unlock new opportunities and accelerate growth.
+</p>
+
 <ul>
 <li>Business Introductions</li>
 <li>Brand Partnerships</li>
+<li>Agency Connections</li>
 <li>Influencer Collaborations</li>
-<li>Networking Events</li>
+<li>Strategic Networking</li>
+<li>Opportunity Referrals</li>
+<li>Professional Introductions</li>
+<li>Exclusive Events</li>
 </ul>
-</div>
 
 </div>
 
 </div>
+
+</div>
+
 </section>
 
-<!-- OUTCOMES -->
 <section>
+
 <div class="container">
+
+<h2 class="section-title">
+What We Deliver
+</h2>
+
+<p class="section-subtitle">
+Everything we do is designed to create measurable momentum.
+</p>
+
 <div class="outcomes">
 
-<div class="outcome"><h4>Visibility</h4><p>Reach your audience</p></div>
-<div class="outcome"><h4>Authority</h4><p>Build credibility</p></div>
-<div class="outcome"><h4>Connections</h4><p>Grow network</p></div>
-<div class="outcome"><h4>Growth</h4><p>Long-term success</p></div>
+<div class="outcome">
+<h4>Increased Visibility</h4>
+<p>Reach the right audience through strategic promotion.</p>
+</div>
+
+<div class="outcome">
+<h4>Brand Authority</h4>
+<p>Build trust, credibility, and market positioning.</p>
+</div>
+
+<div class="outcome">
+<h4>Strategic Partnerships</h4>
+<p>Create valuable collaborations and opportunities.</p>
+</div>
+
+<div class="outcome">
+<h4>Sustainable Growth</h4>
+<p>Build long-term momentum that compounds over time.</p>
+</div>
 
 </div>
+
 </div>
+
 </section>
 
-<!-- AUDIENCE -->
-<section>
+<section class="audience">
+
 <div class="container">
+
+<h2 class="section-title">
+Who We Serve
+</h2>
+
 <div class="audience-grid">
 
 <div class="audience-card">
-<h3>Businesses</h3>
-<p>Startups, real estate, luxury brands, services</p>
+
+<h3>
+Businesses
+</h3>
+
+<p>
+Startups • Local Businesses • Professional Services • Hospitality • Real Estate • E-Commerce • Luxury Brands
+</p>
+
 </div>
 
 <div class="audience-card">
-<h3>Creators</h3>
-<p>Influencers, models, entrepreneurs, professionals</p>
+
+<h3>
+Professionals & Creators
+</h3>
+
+<p>
+Entrepreneurs • Influencers • Models • Creators • Public Figures • Industry Experts • Consultants
+</p>
+
 </div>
 
 </div>
+
 </div>
+
 </section>
 
-<!-- WHY -->
 <section>
+
 <div class="container">
+
+<h2 class="section-title">
+Why Leading Brands Choose Ascend
+</h2>
+
+<p class="section-subtitle">
+We combine strategic promotion with meaningful connections to create growth opportunities.
+</p>
+
 <div class="why-grid">
 
-<div class="why-card"><h4>Visibility</h4><p>Get discovered</p></div>
-<div class="why-card"><h4>Influence</h4><p>Build authority</p></div>
-<div class="why-card"><h4>Connections</h4><p>Expand network</p></div>
-<div class="why-card"><h4>Opportunity</h4><p>Scale faster</p></div>
+<div class="why-card">
+<h4>Visibility</h4>
+<p>Become more discoverable.</p>
+</div>
+
+<div class="why-card">
+<h4>Influence</h4>
+<p>Strengthen market positioning.</p>
+</div>
+
+<div class="why-card">
+<h4>Connections</h4>
+<p>Access valuable relationships.</p>
+</div>
+
+<div class="why-card">
+<h4>Opportunities</h4>
+<p>Turn visibility into results.</p>
+</div>
 
 </div>
+
 </div>
+
 </section>
 
-<!-- FOUNDER -->
 <section>
+
 <div class="container">
+
 <div class="founder">
 
-<h2>A Word From Our Founder</h2>
+<h2>
+A Word From Our Founder
+</h2>
 
 <p>
-Ascend Media Group was built on the belief that visibility creates opportunity.
+Ascend Media Group was built on a simple principle: visibility creates opportunity.
 </p>
+
 <p>
-We help brands position themselves in front of the right audience.
+The right audience, the right message, and the right connections can transform the trajectory of a business or personal brand.
+</p>
+
+<p>
+Our role is to help clients position themselves for growth, influence, and long-term success.
 </p>
 
 </div>
+
 </div>
+
 </section>
 
-<!-- CTA -->
-<section class="cta">
+<section class="cta" id="contact">
+
 <div class="container">
 
-<h2>Ready To Grow?</h2>
+<h2>
+Ready To Grow?
+</h2>
 
 <p>
-Start building visibility, authority, and opportunities today.
+Whether you're building a business, growing a personal brand, or expanding your professional network, Ascend Media Group provides the visibility and connections that create momentum.
 </p>
 
 <div class="hero-buttons">
-<a href="https://ascendmediagroup.github.io/schedule.html" class="btn btn-primary">Schedule Consultation</a>
+
+<a href="https://ascendmediagroup.github.io/schedule.html" class="btn btn-primary">
+Schedule Consultation
+</a>
+
+
 </div>
 
 </div>
+
 </section>
 
-<!-- FOOTER -->
 <footer>
-<div class="footer-name">ASCEND MEDIA GROUP</div>
-<div class="footer-tag">Create • Promote • Connect</div>
+
+<div class="footer-name">
+ASCEND MEDIA GROUP
+</div>
+
+<div class="footer-tag">
+Strategic Growth • Visibility • Partnerships
+</div>
+
 </footer>
 
 </body>
