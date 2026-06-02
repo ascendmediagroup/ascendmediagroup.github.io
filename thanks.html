@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Application Received | Ascend Media Group</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--gold:#D4AF37;
+--gold-light:#E7C766;
+--black:#050505;
+--card:#0d0d0d;
+--text:#ffffff;
+--muted:#b4b4b4;
+--border:rgba(212,175,55,.18);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:var(--black);
+color:var(--text);
+font-family:'Inter',sans-serif;
+display:flex;
+align-items:center;
+justify-content:center;
+min-height:100vh;
+padding:40px;
+text-align:center;
+}
+
+.container{
+max-width:850px;
+width:100%;
+}
+
+.card{
+background:linear-gradient(180deg,#101010,#0b0b0b);
+border:1px solid var(--border);
+padding:80px 45px;
+border-radius:28px;
+position:relative;
+overflow:hidden;
+}
+
+.card:before{
+content:"";
+position:absolute;
+width:700px;
+height:700px;
+background:radial-gradient(circle, rgba(212,175,55,.15) 0%, transparent 70%);
+left:50%;
+top:-280px;
+transform:translateX(-50%);
+}
+
+.tag{
+display:inline-block;
+padding:10px 20px;
+border:1px solid var(--border);
+border-radius:999px;
+font-size:12px;
+letter-spacing:2px;
+color:var(--gold);
+margin-bottom:25px;
+position:relative;
+z-index:2;
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:3.8rem;
+margin-bottom:20px;
+position:relative;
+z-index:2;
+line-height:1.1;
+}
+
+h1 span{
+color:var(--gold);
+}
+
+p{
+color:var(--muted);
+font-size:1.1rem;
+max-width:650px;
+margin:0 auto 18px;
+line-height:1.7;
+position:relative;
+z-index:2;
+}
+
+.note{
+margin-top:10px;
+font-size:0.95rem;
+color:rgba(255,255,255,.6);
+position:relative;
+z-index:2;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 34px;
+background:var(--gold);
+color:#000;
+text-decoration:none;
+border-radius:999px;
+font-weight:600;
+transition:.3s;
+position:relative;
+z-index:2;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.footer-text{
+margin-top:25px;
+font-size:0.85rem;
+color:rgba(255,255,255,.5);
+position:relative;
+z-index:2;
+letter-spacing:1px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<div class="tag">
+ASCEND MEDIA GROUP
+</div>
+
+<h1>
+Application <span>Received</span>
+</h1>
+
+<p>
+Thank you for applying to Ascend Media Group.
+</p>
+
+<p>
+Your application has been successfully submitted and is now under review by our team.
+We carefully evaluate every submission to ensure the highest quality of partnerships and opportunities within our network.
+</p>
+
+<p>
+We will contact you within the next 24–72 hours with next steps.
+</p>
+
+<a href="/" class="btn">
+Return to Home
+</a>
+
+<div class="footer-text">
+CREATE • PROMOTE • CONNECT
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
