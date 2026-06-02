@@ -554,6 +554,122 @@ max-width:320px;
   max-width:1100px;
   color:#ffffff;
 }
+  /* PRICING */
+
+.pricing-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+margin-top:50px;
+}
+
+.pricing-card{
+background:linear-gradient(180deg,#101010,#0b0b0b);
+border:1px solid var(--border);
+border-radius:30px;
+padding:45px;
+position:relative;
+display:flex;
+flex-direction:column;
+}
+
+.pricing-card.featured{
+border:2px solid var(--gold);
+transform:scale(1.03);
+}
+
+.pricing-badge{
+position:absolute;
+top:-14px;
+left:50%;
+transform:translateX(-50%);
+background:var(--gold);
+color:#000;
+font-size:12px;
+font-weight:700;
+padding:8px 18px;
+border-radius:999px;
+letter-spacing:1px;
+}
+
+.pricing-name{
+font-family:'Cormorant Garamond',serif;
+font-size:2.4rem;
+text-align:center;
+margin-bottom:10px;
+}
+
+.pricing-price{
+font-size:3rem;
+font-weight:700;
+color:var(--gold);
+text-align:center;
+margin-bottom:20px;
+}
+
+.pricing-description{
+text-align:center;
+color:var(--muted);
+margin-bottom:25px;
+}
+
+.pricing-features{
+list-style:none;
+margin-bottom:30px;
+}
+
+.pricing-features li{
+padding:12px 0;
+border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.pricing-actions{
+margin-top:auto;
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.pricing-btn{
+display:block;
+width:100%;
+text-align:center;
+padding:15px;
+background:var(--gold);
+color:#000;
+text-decoration:none;
+font-weight:700;
+border-radius:999px;
+}
+
+.pricing-btn-outline{
+display:block;
+width:100%;
+text-align:center;
+padding:15px;
+border:1px solid var(--gold);
+color:var(--gold);
+text-decoration:none;
+font-weight:600;
+border-radius:999px;
+}
+
+.pricing-btn-outline:hover{
+background:var(--gold);
+color:#000;
+}
+
+@media(max-width:950px){
+
+.pricing-grid{
+grid-template-columns:1fr;
+}
+
+.pricing-card.featured{
+transform:none;
+}
+
+}
 </style>
   <script type="application/ld+json">
 {
@@ -777,7 +893,165 @@ Everything we do is designed to create measurable momentum.
 </div>
 
 </section>
+<section id="pricing">
 
+<div class="container">
+
+<h2 class="section-title">
+Growth Packages
+</h2>
+
+<p class="section-subtitle">
+Consistent content creation and strategic visibility designed to help businesses, creators, and professionals grow their audience, influence, and opportunities.
+</p>
+
+<div class="pricing-grid">
+
+<!-- STARTER -->
+
+<div class="pricing-card">
+
+<h3 class="pricing-name">
+Starter
+</h3>
+
+<div class="pricing-price">
+$150
+</div>
+
+<p class="pricing-description">
+Build a consistent online presence and establish a foundation for long-term growth.
+</p>
+
+<ul class="pricing-features">
+<li>15 Reels Per Month</li>
+<li>1 Reel Every Other Day</li>
+<li>Posted Across TikTok, Instagram & Facebook</li>
+<li>Basic Visibility Audit</li>
+<li>Profile & Content Review</li>
+<li>Content Direction Recommendations</li>
+<li>Growth Strategy Outline</li>
+<li>1–2 Actionable Improvement Plans</li>
+</ul>
+
+<p style="text-align:center;color:var(--muted);font-size:14px;margin-top:20px;">
+Ideal for startups, local businesses, and creators building their presence.
+</p>
+
+<div class="pricing-actions">
+
+<a href="YOUR_STARTER_PAYMENT_LINK" class="pricing-btn">
+Start Starter Package
+</a>
+
+<a href="https://ascendmediagroup.github.io/schedule.html" class="pricing-btn-outline">
+Schedule Consultation
+</a>
+
+</div>
+
+</div>
+
+<!-- CORE -->
+
+<div class="pricing-card featured">
+
+<div class="pricing-badge">
+MOST POPULAR
+</div>
+
+<h3 class="pricing-name">
+Core
+</h3>
+
+<div class="pricing-price">
+$500
+</div>
+
+<p class="pricing-description">
+Our most popular package for businesses and professionals focused on consistent growth and increased visibility.
+</p>
+
+<ul class="pricing-features">
+<li>30 Reels Per Month</li>
+<li>1 Reel Every Day</li>
+<li>Posted Across TikTok, Instagram & Facebook</li>
+<li>30-Day Content Strategy</li>
+<li>Profile Optimization</li>
+<li>Growth Roadmap</li>
+<li>Audience Growth Planning</li>
+<li>Visibility Enhancement Strategy</li>
+</ul>
+
+<p style="text-align:center;color:var(--muted);font-size:14px;margin-top:20px;">
+Ideal for businesses ready to accelerate audience growth and brand awareness.
+</p>
+
+<div class="pricing-actions">
+
+<a href="YOUR_CORE_PAYMENT_LINK" class="pricing-btn">
+Start Core Package
+</a>
+
+<a href="https://ascendmediagroup.github.io/schedule.html" class="pricing-btn-outline">
+Schedule Consultation
+</a>
+
+</div>
+
+</div>
+
+<!-- PREMIUM -->
+
+<div class="pricing-card">
+
+<h3 class="pricing-name">
+Premium
+</h3>
+
+<div class="pricing-price">
+$2,000
+</div>
+
+<p class="pricing-description">
+Designed for brands seeking maximum visibility, authority positioning, and accelerated audience growth.
+</p>
+
+<ul class="pricing-features">
+<li>60 Reels Per Month</li>
+<li>2 Reels Every Day</li>
+<li>Posted Across TikTok, Instagram & Facebook</li>
+<li>Authority Building Strategy</li>
+<li>Advanced Positioning Framework</li>
+<li>Growth Acceleration System</li>
+<li>Strategic Partnership Opportunities</li>
+<li>Priority Content Planning</li>
+<li>Priority Support</li>
+</ul>
+
+<p style="text-align:center;color:var(--gold);font-size:14px;margin-top:20px;">
+Limited monthly availability.
+</p>
+
+<div class="pricing-actions">
+
+<a href="YOUR_PREMIUM_PAYMENT_LINK" class="pricing-btn">
+Apply For Premium Growth
+</a>
+
+<a href="https://ascendmediagroup.github.io/schedule.html" class="pricing-btn-outline">
+Schedule Consultation
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 <section class="audience">
 
 <div class="container">
