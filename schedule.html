@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ascend Media Group | Consultation Request</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--gold:#D4AF37;
+--gold-light:#E7C766;
+--bg:#050505;
+--card:#0d0d0d;
+--text:#ffffff;
+--muted:#b5b5b5;
+--border:rgba(212,175,55,.18);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+font-family:'Inter',sans-serif;
+min-height:100vh;
+padding:40px 20px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+}
+
+.logo{
+text-align:center;
+font-family:'Cormorant Garamond',serif;
+font-size:3rem;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.logo span{
+color:var(--gold);
+}
+
+.tagline{
+text-align:center;
+color:var(--gold);
+letter-spacing:3px;
+font-size:12px;
+margin-bottom:50px;
+}
+
+.hero{
+text-align:center;
+margin-bottom:40px;
+}
+
+.hero h1{
+font-family:'Cormorant Garamond',serif;
+font-size:clamp(3rem,6vw,5rem);
+line-height:1;
+margin-bottom:20px;
+}
+
+.hero p{
+color:var(--muted);
+font-size:1.1rem;
+max-width:700px;
+margin:auto;
+}
+
+.card{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:30px;
+padding:50px;
+}
+
+form{
+display:flex;
+flex-direction:column;
+}
+
+label{
+font-size:.95rem;
+font-weight:600;
+margin-bottom:8px;
+margin-top:18px;
+}
+
+input,
+select,
+textarea{
+width:100%;
+padding:16px;
+background:#111;
+border:1px solid rgba(255,255,255,.08);
+border-radius:14px;
+color:white;
+font-size:1rem;
+font-family:inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+outline:none;
+border-color:var(--gold);
+}
+
+textarea{
+resize:vertical;
+}
+
+button{
+margin-top:30px;
+padding:18px;
+background:var(--gold);
+color:black;
+border:none;
+border-radius:999px;
+font-weight:700;
+font-size:1rem;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:translateY(-2px);
+}
+
+.benefits{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-top:35px;
+}
+
+.benefit{
+background:#111;
+border:1px solid rgba(212,175,55,.12);
+padding:18px;
+border-radius:14px;
+text-align:center;
+font-size:.95rem;
+}
+
+.privacy{
+text-align:center;
+margin-top:30px;
+color:var(--muted);
+font-size:.95rem;
+}
+
+.footer{
+text-align:center;
+margin-top:50px;
+color:var(--muted);
+font-size:.9rem;
+}
+
+@media(max-width:768px){
+
+.card{
+padding:30px;
+}
+
+.benefits{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:2.8rem;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="logo">
+Ascend <span>Media Group</span>
+</div>
+
+<div class="tagline">
+STRATEGIC GROWTH • VISIBILITY • PARTNERSHIPS
+</div>
+
+<div class="hero">
+
+<h1>
+Request A Consultation
+</h1>
+
+<p id="desc">
+🚀 Apply for a complimentary consultation with Ascend Media Group. Tell us about your business, brand, or goals and our team will review your application.
+</p>
+
+</div>
+
+<div class="card">
+
+<form action="https://api.web3forms.com/submit" method="POST">
+
+<input type="hidden" name="access_key" value="e092569b-da4e-40d5-8da1-f3e18c98eaf4">
+<input type="hidden" name="redirect" value="https://velvetroyale.github.io/velvet-elite/thanks.html">
+<input type="hidden" name="subject" value="Ascend Media Group Consultation Request">
+<input type="hidden" name="from_name" value="Ascend Media Group">
+
+<input type="checkbox" name="botcheck" style="display:none;">
+
+<label>First Name *</label>
+<input type="text" name="First Name" required>
+
+<label>Last Name *</label>
+<input type="text" name="Last Name" required>
+
+<label>Email *</label>
+<input type="email" name="Email" required>
+
+<label>Phone (Optional)</label>
+<input type="text" name="Phone">
+
+<label>Location *</label>
+<input type="text" name="Location" required>
+
+<label>I Am A *</label>
+<select name="Client Type" required>
+<option value="">Select One</option>
+<option>Business Owner</option>
+<option>Entrepreneur</option>
+<option>Influencer</option>
+<option>Content Creator</option>
+<option>Model</option>
+<option>Professional</option>
+<option>Agency</option>
+<option>Brand Representative</option>
+<option>Public Figure</option>
+<option>Other</option>
+</select>
+
+<label>Business / Brand Name</label>
+<input type="text" name="Business or Brand Name">
+
+<label>Website / Social Media</label>
+<input type="text" name="Website or Social Media">
+
+<label>Primary Goal *</label>
+<select name="Primary Goal" required>
+<option value="">Select One</option>
+<option>Increase Visibility</option>
+<option>Grow Social Media</option>
+<option>Generate Leads</option>
+<option>Build Brand Awareness</option>
+<option>Personal Branding</option>
+<option>Content Creation</option>
+<option>Strategic Partnerships</option>
+<option>Professional Networking</option>
+<option>Influencer Collaborations</option>
+<option>Other</option>
+</select>
+
+<label>Tell Us About Your Goals *</label>
+<textarea name="Goals" rows="5" required></textarea>
+
+<button type="submit">
+Request Consultation
+</button>
+
+<div class="benefits">
+
+<div class="benefit">
+✔ Strategic Growth Guidance
+</div>
+
+<div class="benefit">
+✔ Brand Visibility Solutions
+</div>
+
+<div class="benefit">
+✔ Professional Networking Opportunities
+</div>
+
+<div class="benefit">
+✔ Applications Reviewed Personally
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+<div class="privacy">
+🔒 Private & confidential. Your information is never shared with third parties.
+</div>
+
+<div class="footer">
+© Ascend Media Group
+</div>
+
+</div>
+
+</body>
+</html>
+```
