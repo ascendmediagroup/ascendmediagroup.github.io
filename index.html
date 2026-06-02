@@ -454,17 +454,24 @@ max-width:320px;
 
 <nav>
 <div class="container">
-<div class="nav-inner">
+<div class="nav-inner" style="display:flex; align-items:center; justify-content:space-between; position:relative;">
 
-<div class="logo">
-  <img src="https://ascendmediagroup.github.io/ascend_group.png" 
-       alt="Ascend Media Group"
-       style="max-width:120px; width:28vw; height:auto;">
-</div>
+  <!-- LEFT TEXT LOGO -->
+  <div class="logo">
+    Ascend <span>Media Group</span>
+  </div>
 
-<a href="https://ascendmediagroup.github.io/schedule" class="nav-btn">
-Schedule Consultation
-</a>
+  <!-- CENTER IMAGE LOGO -->
+  <div style="position:absolute; left:50%; transform:translateX(-50%);">
+    <img src="ascend_group.png" 
+         alt="Ascend Media Group"
+         style="max-width:110px; width:30vw; height:auto;">
+  </div>
+
+  <!-- RIGHT BUTTON -->
+  <a href="https://ascendmediagroup.github.io/schedule.html" class="nav-btn">
+    Schedule Consultation
+  </a>
 
 </div>
 </div>
