@@ -447,14 +447,52 @@ max-width:320px;
 }
 
 }
+.nav-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:relative;
+}
 
+/* center logo desktop */
+.center-logo{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.center-logo img{
+  max-width:110px;
+  width:100%;
+  height:auto;
+}
+
+/* MOBILE FIX */
+@media(max-width:950px){
+
+  .nav-inner{
+    flex-direction:column;
+    gap:10px;
+    text-align:center;
+  }
+
+  .center-logo{
+    position:static;
+    transform:none;
+  }
+
+  .center-logo img{
+    max-width:85px;
+  }
+
+}
 </style>
 </head>
 <body>
 
 <nav>
 <div class="container">
-<div class="nav-inner" style="display:flex; align-items:center; justify-content:space-between; position:relative;">
+<div class="nav-inner">
 
   <!-- LEFT TEXT LOGO -->
   <div class="logo">
@@ -462,10 +500,8 @@ max-width:320px;
   </div>
 
   <!-- CENTER IMAGE LOGO -->
-  <div style="position:absolute; left:50%; transform:translateX(-50%);">
-    <img src="ascend_group.png" 
-         alt="Ascend Media Group"
-         style="max-width:110px; width:30vw; height:auto;">
+  <div class="center-logo">
+    <img src="ascend_group.png" alt="Ascend Media Group">
   </div>
 
   <!-- RIGHT BUTTON -->
