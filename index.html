@@ -695,6 +695,34 @@ transform:none;
     }
 
 }
+  .video-thumbnail{
+    max-width:500px;
+    margin:40px auto;
+    position:relative;
+}
+
+.video-thumbnail img{
+    width:100%;
+    border-radius:24px;
+    display:block;
+}
+
+.play-button{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:rgba(212,175,55,.95);
+    color:#000;
+    font-size:36px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+}
 </style>
   <script type="application/ld+json">
 {
@@ -762,16 +790,11 @@ Schedule Consultation
 </a>
 <br><br>
 
-<div class="hero-video">
-  <iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/48ZhLEkeLHY?autoplay=1&mute=1&playsinline=1"
-    title="YouTube video player"
-    frameborder="0"
-    allow="autoplay; encrypted-media; picture-in-picture"
-    allowfullscreen>
-  </iframe>
+<div class="video-thumbnail">
+    <a href="https://www.youtube.com/watch?v=48ZhLEkeLHY" target="_blank">
+        <img src="ascend.jpeg" alt="Watch Video">
+        <div class="play-button">▶</div>
+    </a>
 </div>
   
 </section>
